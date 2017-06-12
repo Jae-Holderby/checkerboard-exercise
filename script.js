@@ -20,12 +20,12 @@ function checkerBoard() {
 
     redBox.style.width = "11.1%";
     redBox.style.paddingBottom = "11.1%";
-    redBox.style.backgroundColor = getRandomColor()
+    redBox.style.backgroundColor = "blue"
     redBox.style.float = "left"
 
     blackBox.style.width = "11.1%";
     blackBox.style.paddingBottom = "11.1%";
-    blackBox.style.backgroundColor = getRandomColor()
+    blackBox.style.backgroundColor = "skyblue"
     blackBox.style.float = "left"
   }
 }
