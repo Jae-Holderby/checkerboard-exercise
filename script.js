@@ -10,24 +10,15 @@ function getRandomColor() {
     }
 var divs = [];
 function checkerBoard() {
-  for (var i = 0; i < (window.innerHeight + 2) /10 ; i++) {
-    var blackBox = document.createElement('div')
-    var redBox = document.createElement('div')
-
-    document.body.appendChild(blackBox)
-    document.body.appendChild(redBox)
-
-    redBox.style.width = "11.1%";
-    redBox.style.paddingBottom = "11.1%";
-    redBox.style.backgroundColor = getRandomColor()
-    redBox.style.float = "left"
-
-    blackBox.style.width = "11.1%";
-    blackBox.style.paddingBottom = "11.1%";
-    blackBox.style.backgroundColor = getRandomColor()
-    blackBox.style.float = "left"
+  for (var i = 0; i < (window.innerHeight) / 2 ; i++) {
+    var box = document.createElement('div')
 
 
+    document.body.appendChild(box)
+    box.style.width = "11.1%";
+    box.style.paddingBottom = "11.1%";
+    box.style.float = "left"
+    box.style.backgroundColor = getRandomColor()
   }
 }
 checkerBoard()
