@@ -3,22 +3,23 @@
 
 
 function checkerBoard() {
-  for (var i = 0; i < window.innerHeight + 1 ; i++) {
-    var blackBox = document.createElement('div')
-    var redBox = document.createElement('div')
+  var color1 = 0
+  var color2 = 255
+  for (var i = 0; i < (window.innerHeight + 1) / 2; i++) {
+    // var blackBox = document.createElement('div')
+    var box = document.createElement('div')
+    document.body.appendChild(box)
 
-    document.body.appendChild(blackBox)
-    document.body.appendChild(redBox)
-
-    redBox.style.width = "11.1%";
-    redBox.style.paddingBottom = "11.1%";
-    redBox.style.backgroundImage = "linear-gradient(to bottom, rgba(200, 0, 255, 1) 0%, rgba )"
-    redBox.style.float = "left"
-
-    blackBox.style.width = "11.1%";
-    blackBox.style.paddingBottom = "11.1%";
-    blackBox.style.backgroundColor = "rgba(0, 230, 230, 1)"
-    blackBox.style.float = "left"
+    box.style.width = "11.1%";
+    box.style.paddingBottom = "11.1%";
+    box.style.float = "left"
+    if (i % 2 === 0) {
+      box.style.backgroundColor = "rgba(0, 0, " + color1 + ", 1)"
+    } else {
+      box.style.backgroundColor = "rgba(" + color2 +", 0, 0, 1)"
+    }
+    color1++
+    color2--
   }
 }
 checkerBoard();
