@@ -8,7 +8,7 @@ function getRandomColor() {
         }
         return color;
     }
-var divs = [];
+
 function checkerBoard() {
   for (var i = 0; i < (window.innerHeight) / 2 ; i++) {
     var box = document.createElement('div')
@@ -22,12 +22,3 @@ function checkerBoard() {
   }
 }
 checkerBoard()
-
-function changeColor() {
-    for(var i = 0; i < (window.innerHeight + 2) /10 ; i++){
-      document.body.children[i].style.backgroundColor = getRandomColor()
-    }
-
-}
-
-setInterval(changeColor, 2000)
