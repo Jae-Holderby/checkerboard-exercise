@@ -2,22 +2,19 @@
 
 function checkerBoard() {
   for (var i = 0; i < window.innerHeight + 1 ; i++) {
-    var blackBox = document.createElement('div')
-    var redBox = document.createElement('div')
+    var box = document.createElement('div')
+    document.body.appendChild(box)
 
-    document.body.appendChild(blackBox)
-    document.body.appendChild(redBox)
+    box.style.width = "11.1%";
+    box.style.paddingBottom = "11.1%";
+    box.style.float = "left"
 
-
-    redBox.style.width = "11.1%";
-    redBox.style.paddingBottom = "11.1%";
-    redBox.style.backgroundColor = "black"
-    redBox.style.float = "left"
-
-    blackBox.style.width = "11.1%";
-    blackBox.style.paddingBottom = "11.1%";
-    blackBox.style.backgroundColor = "red"
-    blackBox.style.float = "left"
+    if (i % 2 === 0) {
+    box.style.backgroundColor = "black"
+  } else {
+    box.style.backgroundColor = "red"
   }
 }
+}
+
 checkerBoard();
